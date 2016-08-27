@@ -1,0 +1,2 @@
+# oauth2ApiDemo
+这是一个基于oauth2设计的Spring restful安全的api案例，只为提供为ios/android等客户端提供安全的api设计参考
