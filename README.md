@@ -53,7 +53,13 @@ client_credentials -- 客户端模式(无用户,用户向客户端注册,然后�
 ## 使用
 1. 测试password授权方式。
 2. 地址:http://localhost:8080/oauth2ApiDemo/oauth/token?grant_type=password&client_id=restapp&client_secret=restapp&username=zzxb&password=qaz123
-3. 结果:{"access_token":"ec25d26c-24f9-4caa-ac07-34dae7403706","token_type":"bearer","refresh_token":"51797e4a-a69a-4e79-a770-e020af098657","expires_in":119}
+3. 结果:<br/>
+{<br/>
+"access_token":"ec25d26c-24f9-4caa-ac07-34dae7403706",<br/>
+"token_type":"bearer",<br/>
+"refresh_token":"51797e4a-a69a-4e79-a770-e020af098657",<br/>
+"expires_in":119</br/
+}<br/>
 4. 获得access_token后,就可以访问:http://localhost:8080/oauth2ApiDemo/api/users/?access_token=ec25d26c-24f9-4caa-ac07-34dae7403706
 5. 结果:[{"id":1,"name":"user_a","email":"user_a@example.com","phone":"9898989898"},{"id":2,"name":"user_b","email":"user_b@example.com","phone":"9767989898"},{"id":3,"name":"user_c","email":"user_c@example.com","phone":"9898459898"}]
 6. 超过访问时,访问结果为:
@@ -65,7 +71,12 @@ client_credentials -- 客户端模式(无用户,用户向客户端注册,然后�
                </oauth>
 7. 测试client_credentials授权方式。
 8. 测试:http://localhost:8080/oauth2ApiDemo/oauth/token?grant_type=client_credentials&client_id=restapp&client_secret=restapp
-9. 结果:{"access_token":"c0455d2b-8965-46f7-a378-cbbc1320bf37","token_type":"bearer","expires_in":119}
+9. 结果:<br/>
+{<br/>
+"access_token":"c0455d2b-8965-46f7-a378-cbbc1320bf37",<br/>
+"token_type":"bearer",<br/>
+"expires_in":119<br/>
+}<br/>
 10. 重复第4步。
 
 ## 开发者
