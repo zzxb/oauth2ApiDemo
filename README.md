@@ -63,12 +63,16 @@ client_credentials -- 客户端模式(无用户,用户向客户端注册,然后�
 4. 获得access_token后,就可以访问:http://localhost:8080/oauth2ApiDemo/api/users/?access_token=ec25d26c-24f9-4caa-ac07-34dae7403706
 5. 结果:[{"id":1,"name":"user_a","email":"user_a@example.com","phone":"9898989898"},{"id":2,"name":"user_b","email":"user_b@example.com","phone":"9767989898"},{"id":3,"name":"user_c","email":"user_c@example.com","phone":"9898459898"}]
 6. 超过访问时,访问结果为:
+
+```xml
                <oauth>
                <error_description>
                Access token expired: ec25d26c-24f9-4caa-ac07-34dae7403706
                </error_description>
                <error>invalid_token</error>
                </oauth>
+```
+  
 7. 测试client_credentials授权方式。
 8. 测试:http://localhost:8080/oauth2ApiDemo/oauth/token?grant_type=client_credentials&client_id=restapp&client_secret=restapp
 9. 结果:<br/>
